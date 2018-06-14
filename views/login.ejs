@@ -1,0 +1,32 @@
+<head>
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+
+    <h1>
+        <%= title %>
+    </h1>
+
+    <% if (messages.error) { %>
+        <h4 style="color:red">
+            <%-  messages.error %>
+        </h4>
+        <% } %>
+            <% if (messages.success) { %>
+                <h4 style="color:green">
+                    <%-  messages.success %>
+                </h4>
+                <% } %>
+
+                    <form action="/signup/login" method="POST">
+                        <input type="text" name="id" id="id">
+                        <input type="password" name="password" id="password">
+                        <button type="submit">Submit</button>
+                    </form>
+                    <a href="/signup">Signup</a>
+</body>
+
+</html>
